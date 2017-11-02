@@ -5,8 +5,6 @@ date:   2017-11-01
 categories:
 ---
 
-# GoLang Templating Made Easy #
-
 Golang provides the package [text/template](https://golang.org/pkg/text/template/) for generating textual output from an object.
 I will go over a few of the things I've learned while using it.
 

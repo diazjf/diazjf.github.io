@@ -1,0 +1,14 @@
+title: Fern's Notes
+email: diazjf@us.ibm.com
+description: >-
+  I little info about programming, travel, working out,
+  and weird videos on YouTube.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://diazjf.github.io"
+github_username:  diazjf
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed

@@ -24,7 +24,7 @@ An object or range of objects can be used with a template to create a textual ou
 recognizing the object being passed in and drawing attributes from the object to create wanted text. It is very useful for
 reports or server configurations.
 
-[Here]({{ "/resources/sample-code/zoo/example-1" | absolute_url }}) is an example in which I created a ZooKeeper application
+[Here](https://github.com/diazjf/diazjf.github.io/tree/master/resources/sample-code/zoo/example-1) is an example in which I created a ZooKeeper application
 which generates a report based off of different zoos and what animals they contain.
 
 ## Creating a Template Function ##
@@ -33,7 +33,7 @@ Template functions are very useful for processing Objects passed within the temp
 allow animals which are suitable for the climate in the area of the zoo's location. We can create a function to sort
 which animals belong in the zoo, so we can generate a template of the acceptable animals.
 
-[Here]({{ "/resources/sample-code/zoo/example-2" | absolute_url }}) is an example I have created of how to use a function within a
+[Here](https://github.com/diazjf/diazjf.github.io/tree/master/resources/sample-code/zoo/example-2) is an example I have created of how to use a function within a
 template. The function run in the template accepts `[]Animal` and a string `Zoo.Climate` and returns a list of Animals which
 `Animals[i].Climates` matches `Zoo.Climate`. It can be seen in the FunctionMap with a given name defining it on the template.
 
@@ -42,7 +42,7 @@ template. The function run in the template accepts `[]Animal` and a string `Zoo.
 A sub-template would be a template that is loaded within another template. This is useful because, we can move all
 common code to another template and reduce duplication of code if the sub-template is used several times in the main template.
 
-[Here]({{ "/resources/sample-code/zoo/example-3" | absolute_url }}) is an example I have created of how to use a sub-template.
+[Here](https://github.com/diazjf/diazjf.github.io/tree/master/resources/sample-code/zoo/example-3) is an example I have created of how to use a sub-template.
 You can see that instead of writing the for-loops for both acceptable and unacceptable animals separately, we only write it once.
 
 Note: Sub-Templates can be in other `.tmpl` files. You will just need to pass those files into the `ParseFiles()` function
@@ -51,4 +51,4 @@ seen in the examples.
 ## References ##
 
 - [Related Patch I've created for nginx-ingress](https://github.com/kubernetes/ingress-nginx/pull/1123)
-- [My Examples]({{ "/resources/sample-code/zoo" | absolute_url }})
+- [My Examples](https://github.com/diazjf/diazjf.github.io/tree/master/resources/sample-code/zoo)

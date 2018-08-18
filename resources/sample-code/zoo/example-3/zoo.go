@@ -1,7 +1,8 @@
 package main
 
 import (
-	"github.com/bugsnag/bugsnag-go/errors"
+	"errors"
+	"fmt"
 	"os"
 	"path"
 	"runtime"
@@ -33,7 +34,7 @@ var (
 	Puffin    = Animal{Name: "Puffin", Climates: []string{"Arctic", "SubArctic"}}
 
 	// Zoos
-	miamiZoo    = Zoo{Name: "MiamiZoo", Climate: "SubTropical", Animals: []Animal{Alligator, Crocodile, ArcticFox, Puffin}}
+	miamiZoo     = Zoo{Name: "MiamiZoo", Climate: "SubTropical", Animals: []Animal{Alligator, Crocodile, ArcticFox, Puffin}}
 	reykjavikZoo = Zoo{Name: "ReykjavikZoo", Climate: "SubArctic", Animals: []Animal{Alligator, Crocodile, ArcticFox, Puffin}}
 
 	// Function Map, notice how we define the getAcceptableAnimals key to a function of the same name
@@ -70,7 +71,7 @@ func main() {
 func getAcceptableAnimals(a interface{}, b string) []Animal {
 	animals, ok := a.([]Animal)
 	if !ok {
-		err := errors.Errorf("expected an '[]*Animal' type but %T was returned", animals)
+		err := errors.New(fmt.Sprintf("expected an '[]*Animal' type but %T was returned", animals))
 		panic(err)
 	}
 
@@ -91,7 +92,7 @@ func getAcceptableAnimals(a interface{}, b string) []Animal {
 func getUnacceptableAnimals(a interface{}, b string) []Animal {
 	animals, ok := a.([]Animal)
 	if !ok {
-		err := errors.Errorf("expected an '[]Animal' type but %T was returned", animals)
+		err := errors.New(fmt.Sprintf("expected an '[]Animal' type but %T was returned", animals))
 		panic(err)
 	}
 
